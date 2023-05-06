@@ -1,38 +1,198 @@
+body {
+  background-color: #1e1e1e;
+  color: rgb(255, 255, 255);
+  background-image:url("./Image/BgImage.jpg");
+  background-blend-mode:hard-light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row .col {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.row .col .inputText {
+  width: 50%;
+  max-width: 400px;
+  font-size: 16px;
+}
+.taskBg {
+  display: flex;
+  color: black;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
+}
+.taskBg div {
+  display: flex;
+  align-items: center;
+}
+.taskBg .taskText {
+  flex: 1;
+}
+.completed {
+  background-color: #474e47;
+}
+.taskBg .done .taskText {
+  background-color: #333;
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+.taskNumber {
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 8px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.taskBg .icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+.taskBg .icons span {
+  display: inline-block;
+  margin: 0px 10px 0 10px;
+  cursor: pointer;
+  color: #00ff89;
+}
+.taskBg .icons span:hover {
+  color: rgb(255, 251, 251);
+}
+.taskBg .taskText{
   color: white;
+  font-size: 22px;
+}
+.taskBg .completed{
+  background-color: rgb(74, 65, 65);
+}
+.updateBtn {
+  margin-right: 20px;
+}
+.addBtn{
+  width: 300px;
+  margin-top: 30px;
+  background-color: black;
+  color:white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 33vw;
+}
+@media screen and (max-width: 1280px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 55%;
+
+  }
+}
+@media screen and (max-width: 980px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 55%;
+
+  }
+}
+@media screen and (max-width: 768px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 55%;
+
+  }
+  .addBtn {
+    width: 200px;
+    margin-left: 32vw;
+  }
+  input[type="radio"] {
+    margin: 20px 5px 0px 20px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 480px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 55%;
+
+  }
+  .addBtn {
+    width: 150px;
+    margin-left: 20vw;
+    font-size: 18px;
+  }
+  input[type="radio"] {
+    margin: 10px 5px 0px 10px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addBtn:hover{
+  background-color: white;
+  color:black
+}
+input[type="radio"]{
+  margin: 20px 5px 0px 30px ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  transition: 0.2s all ease-in-out;
+}
+input[type="radio"]#red {
+  background-color: #ff0000;
+}
+input[type="radio"]#green {
+  background-color: green;
+}
+input[type="radio"]#blue {
+  background-color: blue;
+}
+input[type="radio"]#yellow {
+  background-color: yellow;
+}
+input[type="radio"]:checked#red {
+  border: 3px solid white;
+}
+input[type="radio"]:checked#green {
+  border: 3px solid white;
+}
+input[type="radio"]:checked#blue {
+  border: 3px solid white;
+}
+input[type="radio"]:checked#yellow {
+  border: 3px solid white;
 }
